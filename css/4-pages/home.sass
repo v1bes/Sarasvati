@@ -1,0 +1,131 @@
+
+*
+  box-sizing: border-box
+  &::after, &::before
+    box-sizing: border-box
+
+body
+  font-family: 'Roboto Mono', monospace
+  color: #fff
+  background: #000
+
+a
+  text-decoration: none
+  color: #fff
+  outline: none
+  &:hover, &:focus
+    color: #fff
+
+
+/* Page Loader
+
+.js .loading
+  &::before
+    content: ''
+    position: fixed
+    z-index: 1000
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: #000
+  &::after
+    content: ''
+    position: fixed
+    z-index: 1001
+    top: 50%
+    left: 50%
+    width: 50px
+    height: 50px
+    margin: -25px 0 0 -25px
+    pointer-events: none
+    border-radius: 50%
+    background: #3b3b3b
+    animation: loaderAnim 0.8s ease-out infinite alternate forwards
+
+@keyframes loaderAnim
+  to
+    transform: scale3d(0.5, 0.5, 1)
+
+
+
+#webgl
+  position: fixed
+  z-index: -1
+  top: 0
+  left: 0
+  display: block
+  width: 100vw
+  height: 100vh
+
+
+@keyframes color
+  0%
+    fill: #EEC499
+
+  10%
+    fill: #D18E78
+
+  20%
+    fill: #9b423d
+
+  30%
+    fill: #A21E55
+
+  40%
+    fill: #98559c
+
+  50%
+    fill: #554d81
+
+  60%
+    fill: #5d96cd
+
+  70%
+    fill: #68b6be
+
+  80%
+    fill: #63ae9a
+
+  90%
+    fill: #4e8a7b
+
+  100%
+    fill: #EEC499
+
+main
+  display: block
+  +outer-container
+
+
+.header
+  +outer-container
+  height: 100vh
+
+  .logo
+    +span-columns(12)
+    //+calc(margin-top, '50% - ')
+    margin-top: 25vh
+    height: 50vh
+
+    svg
+      height: 100%
+      .st0
+        //fill: white
+        animation-name: color
+        animation-timing-function: linear
+        animation-duration: 20s
+        animation-iteration-count: infinite
+
+
+    img
+      height: 100%
+      filter: brightness(1)
+
+.events
+  +outer-container
+  background-color: rgba(0, 0, 0, 0.8)
+  padding: 10px
+
+  .con
+    max-width: 1200px
