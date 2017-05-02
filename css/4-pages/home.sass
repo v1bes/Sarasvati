@@ -5,7 +5,7 @@
     box-sizing: border-box
 
 body
-  font-family: 'Roboto Mono', monospace
+  font-family: 'Priori Acute Serif'
   color: #fff
   background: #000
 
@@ -95,7 +95,7 @@ a
 
 main
   display: block
-  +outer-container
+  +outer-container(100vw)
 
 
 .header
@@ -109,7 +109,12 @@ main
     height: 50vh
 
     svg
-      height: 100%
+      height: 50%
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+
       .st0
         //fill: white
         animation-name: color
