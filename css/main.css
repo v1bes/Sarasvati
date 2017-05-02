@@ -669,11 +669,16 @@ body {
   -webkit-text-size-adjust: 100%; }
 
 /*=====================================================================// */
+::-moz-selection {
+  background: #FFF498; }
 ::selection {
   background: #FFF498; }
 
 ::-moz-selection {
   background: #FFF498; }
+
+img::-moz-selection {
+  background: transparent; }
 
 img::selection {
   background: transparent; }
@@ -768,7 +773,8 @@ hr {
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
 
 .frame {
-  transform: rotate(-3deg); }
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg); }
   .frame img {
     position: relative;
     display: block;
@@ -866,13 +872,29 @@ hr {
   .frame .main2 {
     margin-top: -174px; } }
 
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg); }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+            filter: hue-rotate(-360deg); } }
+
+@keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg); }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+            filter: hue-rotate(-360deg); } }
+
 * {
   box-sizing: border-box; }
   *::after, *::before {
     box-sizing: border-box; }
 
 body {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Priori Acute Serif';
   color: #fff;
   background: #000; }
 
@@ -906,11 +928,18 @@ a {
   pointer-events: none;
   border-radius: 50%;
   background: #3b3b3b;
-  animation: loaderAnim 0.8s ease-out infinite alternate forwards; }
+  -webkit-animation: loaderAnim 0.8s ease-out infinite alternate forwards;
+          animation: loaderAnim 0.8s ease-out infinite alternate forwards; }
+
+@-webkit-keyframes loaderAnim {
+  to {
+    -webkit-transform: scale3d(0.5, 0.5, 1);
+            transform: scale3d(0.5, 0.5, 1); } }
 
 @keyframes loaderAnim {
   to {
-    transform: scale3d(0.5, 0.5, 1); } }
+    -webkit-transform: scale3d(0.5, 0.5, 1);
+            transform: scale3d(0.5, 0.5, 1); } }
 
 #webgl {
   position: fixed;
@@ -920,6 +949,30 @@ a {
   display: block;
   width: 100vw;
   height: 100vh; }
+
+@-webkit-keyframes color {
+  0% {
+    fill: #EEC499; }
+  10% {
+    fill: #D18E78; }
+  20% {
+    fill: #9b423d; }
+  30% {
+    fill: #A21E55; }
+  40% {
+    fill: #98559c; }
+  50% {
+    fill: #554d81; }
+  60% {
+    fill: #5d96cd; }
+  70% {
+    fill: #68b6be; }
+  80% {
+    fill: #63ae9a; }
+  90% {
+    fill: #4e8a7b; }
+  100% {
+    fill: #EEC499; } }
 
 @keyframes color {
   0% {
@@ -947,7 +1000,7 @@ a {
 
 main {
   display: block;
-  max-width: 68em;
+  max-width: 100vw;
   margin-left: auto;
   margin-right: auto; }
   main::after {
@@ -956,7 +1009,7 @@ main {
     display: table; }
 
 .header {
-  max-width: 68em;
+  max-width: 81.25em;
   margin-left: auto;
   margin-right: auto;
   height: 100vh; }
@@ -974,18 +1027,28 @@ main {
     .header .logo:last-child {
       margin-right: 0; }
     .header .logo svg {
-      height: 100%; }
+      height: 50%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
       .header .logo svg .st0 {
-        animation-name: color;
-        animation-timing-function: linear;
-        animation-duration: 20s;
-        animation-iteration-count: infinite; }
+        -webkit-animation-name: color;
+                animation-name: color;
+        -webkit-animation-timing-function: linear;
+                animation-timing-function: linear;
+        -webkit-animation-duration: 20s;
+                animation-duration: 20s;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite; }
     .header .logo img {
       height: 100%;
-      filter: brightness(1); }
+      -webkit-filter: brightness(1);
+              filter: brightness(1); }
 
 .events {
-  max-width: 68em;
+  max-width: 81.25em;
   margin-left: auto;
   margin-right: auto;
   background-color: rgba(0, 0, 0, 0.8);
@@ -998,66 +1061,87 @@ main {
     max-width: 1200px; }
 
 section.programm {
-  background-image: url(../img/design/muster/muster01.png);
+  max-width: 100vw;
+  margin-left: auto;
+  margin-right: auto;
   background-size: 100px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background: -webkit-linear-gradient(top left, rgba(255, 65, 54, 0.5), rgba(133, 20, 75, 0.8));
+  background: linear-gradient(to bottom right, rgba(255, 65, 54, 0.5), rgba(133, 20, 75, 0.8));
   padding-top: 30px;
   padding-bottom: 50px;
-  animation-name: bg-color;
-  animation-duration: 80s;
-  animation-iteration-count: infinite;
+  -webkit-animation-name: hue;
+          animation-name: hue;
+  -webkit-animation-duration: 80s;
+          animation-duration: 80s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
   z-index: 4;
   box-shadow: 0px 2px 30px 15px rgba(0, 0, 0, 0.6);
-  position: relative; }
-  section.programm h1 {
-    color: white;
-    text-align: center;
-    font-size: 10em;
-    line-height: 10px; }
-  section.programm .frame-wrap {
-    float: left;
-    display: block;
-    margin-right: 2.3576515979%;
-    width: 65.8807828007%;
-    display: block; }
-    section.programm .frame-wrap:last-child {
-      margin-right: 0; }
-  section.programm .info {
-    float: left;
-    display: block;
-    margin-right: 2.3576515979%;
-    width: 31.7615656014%;
-    color: white;
-    padding: 0 10px; }
-    section.programm .info:last-child {
-      margin-right: 0; }
-    section.programm .info h2 {
+  min-height: 100vh; }
+  section.programm::after {
+    clear: both;
+    content: "";
+    display: table; }
+  section.programm .prog-containter {
+    max-width: 81.25em;
+    margin-left: auto;
+    margin-right: auto; }
+    section.programm .prog-containter::after {
+      clear: both;
+      content: "";
+      display: table; }
+    section.programm .prog-containter h1 {
       color: white;
-      line-height: 0.1em; }
-    section.programm .info h3 {
-      color: white;
-      font-family: sans-serif; }
-    section.programm .info hr {
-      width: 80%;
-      margin-bottom: 10px;
-      padding: 0; }
-  @media (max-width: 900px) {
-    section.programm .frame-wrap {
+      text-align: center;
+      font-size: 10em;
+      margin-bottom: 200px; }
+    section.programm .prog-containter .frame-wrap {
       float: left;
       display: block;
       margin-right: 2.3576515979%;
-      width: 82.9403914003%;
-      margin-left: 8.5298042998%;
-      margin-bottom: 30px; }
-      section.programm .frame-wrap:last-child {
+      width: 65.8807828007%;
+      display: block; }
+      section.programm .prog-containter .frame-wrap:last-child {
         margin-right: 0; }
-    section.programm .info {
+    section.programm .prog-containter .info {
       float: left;
       display: block;
       margin-right: 2.3576515979%;
-      width: 82.9403914003%;
-      margin-left: 8.5298042998%; }
-      section.programm .info:last-child {
-        margin-right: 0; } }
-  @media (max-width: 450px) {
-    section.programm h1 {
-      font-size: 7em; } }
+      width: 31.7615656014%;
+      color: white;
+      padding: 0 10px; }
+      section.programm .prog-containter .info:last-child {
+        margin-right: 0; }
+      section.programm .prog-containter .info h2 {
+        color: white;
+        line-height: 0.1em; }
+      section.programm .prog-containter .info h3 {
+        color: white;
+        font-family: sans-serif; }
+      section.programm .prog-containter .info hr {
+        width: 80%;
+        margin-bottom: 10px;
+        padding: 0; }
+    @media (max-width: 900px) {
+      section.programm .prog-containter .frame-wrap {
+        float: left;
+        display: block;
+        margin-right: 2.3576515979%;
+        width: 82.9403914003%;
+        margin-left: 8.5298042998%;
+        margin-bottom: 30px; }
+        section.programm .prog-containter .frame-wrap:last-child {
+          margin-right: 0; }
+      section.programm .prog-containter .info {
+        float: left;
+        display: block;
+        margin-right: 2.3576515979%;
+        width: 82.9403914003%;
+        margin-left: 8.5298042998%; }
+        section.programm .prog-containter .info:last-child {
+          margin-right: 0; } }
+    @media (max-width: 450px) {
+      section.programm .prog-containter h1 {
+        font-size: 7em; } }
