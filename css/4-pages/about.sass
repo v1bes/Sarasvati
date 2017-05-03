@@ -1,0 +1,28 @@
+section.about
+  +outer-container(100vw)
+  min-height: 100vh
+  background: linear-gradient(to bottom right, rgba(22,22,29,1), rgba(77,60,86,1))
+  padding-top: 50px
+
+  img
+    +span-columns(12)
+    margin-bottom: 40px
+
+  .dj-desc
+    +span-columns(6)
+    font-size: 1em
+    line-height: 1.5em
+
+  .dj-desc-shift
+    +span-columns(6)
+    +shift(3)
+    font-size: 1em
+    line-height: 1.5em
+
+  .dj-img
+    +span-columns(3)
+
+    img
+      border-radius: 50%
+      width: 100%
+      height: 100%

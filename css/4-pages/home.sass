@@ -1,11 +1,9 @@
-
 *
   box-sizing: border-box
   &::after, &::before
     box-sizing: border-box
 
 body
-  font-family: 'Roboto Mono', monospace
   color: #fff
   background: #000
 
@@ -16,6 +14,9 @@ a
   &:hover, &:focus
     color: #fff
 
+p
+  font-family: 'Russo One', sans-serif
+  font-size: 1.5em
 
 /* Page Loader
 
@@ -43,10 +44,6 @@ a
     background: #3b3b3b
     animation: loaderAnim 0.8s ease-out infinite alternate forwards
 
-@keyframes loaderAnim
-  to
-    transform: scale3d(0.5, 0.5, 1)
-
 
 
 #webgl
@@ -59,57 +56,39 @@ a
   height: 100vh
 
 
-@keyframes color
-  0%
-    fill: #EEC499
-
-  10%
-    fill: #D18E78
-
-  20%
-    fill: #9b423d
-
-  30%
-    fill: #A21E55
-
-  40%
-    fill: #98559c
-
-  50%
-    fill: #554d81
-
-  60%
-    fill: #5d96cd
-
-  70%
-    fill: #68b6be
-
-  80%
-    fill: #63ae9a
-
-  90%
-    fill: #4e8a7b
-
-  100%
-    fill: #EEC499
-
 main
   display: block
-  +outer-container
+  +outer-container(100vw)
 
+h1, h2
+  font-family: AtlanticCruise
 
+h1
+  text-align: center
+  font-size: 10em
+  margin: 0
+  margin-bottom: 100px
+
+h2
+  font-size: 3em
+  
 .header
   +outer-container
-  height: 100vh
+  height: 400vh
 
   .logo
     +span-columns(12)
-    //+calc(margin-top, '50% - ')
     margin-top: 25vh
     height: 50vh
+    position: fixed
 
     svg
       height: 100%
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+
       .st0
         //fill: white
         animation-name: color
