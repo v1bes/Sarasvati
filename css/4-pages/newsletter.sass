@@ -1,0 +1,26 @@
+section.newsletter
+  +outer-container()
+  min-height: 300px
+  line-height: 300px
+
+  .news
+    +span-columns(12)
+    text-align: center
+
+    input[type="text"]
+      transition: border 0.3s
+      appearance: none
+      box-shadow: none
+      background: rgba(255, 255, 255, 0.3)
+      backdrop-filter: blur(30px)
+      color: white
+      font-size: 3em
+      font-family: futura
+      padding: 10px 10px 0 10px
+      width: 80%
+      max-width: 700px
+      border: none
+      border-bottom: solid 2px #c9c9c9
+      &:focus
+        outline: none
+        border-bottom: solid 10px rgb(240, 240, 240)
