@@ -1041,7 +1041,7 @@ h2 {
   max-width: 81.25em;
   margin-left: auto;
   margin-right: auto;
-  height: 100vh; }
+  height: 400vh; }
   .header::after {
     clear: both;
     content: "";
@@ -1052,11 +1052,12 @@ h2 {
     margin-right: 2.3576515979%;
     width: 100%;
     margin-top: 25vh;
-    height: 50vh; }
+    height: 50vh;
+    position: fixed; }
     .header .logo:last-child {
       margin-right: 0; }
     .header .logo svg {
-      height: 50%;
+      height: 100%;
       position: absolute;
       left: 50%;
       top: 50%;
