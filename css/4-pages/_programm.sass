@@ -1,66 +1,38 @@
 section.programm
   +outer-container(100vw)
-  // background-image: url(../img/design/muster/muster01.png)
   background-size: 100px
   backdrop-filter: blur(10px)
   // background-color: rgba(10, 0, 0, 0.8)
-  background: linear-gradient(to bottom right, rgba(255,65,54,0.5), rgba(133,20,75,0.8))
+  // background-image: url(../img/design/muster/muster01.png)
+  background-size: 150px
+  background: linear-gradient(to bottom right, rgba(255,65,54,1), rgba(133,20,75,1))
   padding-top: 30px
   padding-bottom: 50px
-  animation-name: hue
+  animation-name: bg-color
   animation-duration: 80s
   animation-iteration-count: infinite
   z-index: 4
-  box-shadow: 0px 2px 30px 15px rgba(0,0,0,0.6)
+  box-shadow: 0px 5px 30px 15px rgba(0,0,0,0.6)
   min-height: 100vh
   .prog-containter
     +outer-container()
 
-    h1
-      color: white
-      text-align: center
-      //font-family: $atlantic
-      font-size: 10em
-      margin-bottom: 200px
-
     .frame-wrap
-      +span-columns(8)
+      +span-columns(7)
       display: block
+      .frame
+        img
+          box-shadow: 0px 2px 30px 10px rgba(0,0,0,0.4)
 
     .info
-      +span-columns(4)
+      +span-columns(5)
       color: white
       padding: 0 10px
-
-      h2
-        color: white
-        //font-family: $atlantic
-        line-height: 0.1em
-
-      h3
-        color: white
-        font-family: sans-serif
 
       hr
         width: 80%
         margin-bottom: 10px
         padding: 0
-
-
-    @media (max-width: 900px)
-      .frame-wrap
-        +span-columns(10)
-        +shift(1)
-        margin-bottom: 30px
-
-      .info
-        +span-columns(10)
-        +shift(1)
-
-    @media (max-width: 450px)
-      h1
-        font-size: 7em
-
 
 
 
