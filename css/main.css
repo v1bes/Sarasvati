@@ -664,16 +664,11 @@ body {
   -webkit-text-size-adjust: 100%; }
 
 /*=====================================================================// */
-::-moz-selection {
-  background: #FFF498; }
 ::selection {
   background: #FFF498; }
 
 ::-moz-selection {
   background: #FFF498; }
-
-img::-moz-selection {
-  background: transparent; }
 
 img::selection {
   background: transparent; }
@@ -742,8 +737,7 @@ a {
   margin-bottom: 0; }
 
 .frame {
-  -webkit-transform: rotate(-3deg);
-          transform: rotate(-3deg); }
+  transform: rotate(-3deg); }
   .frame img {
     position: relative;
     display: block;
@@ -841,45 +835,11 @@ a {
   .frame .main2 {
     margin-top: -174px; } }
 
-@-webkit-keyframes hue {
-  from {
-    -webkit-filter: hue-rotate(0deg);
-            filter: hue-rotate(0deg); }
-  to {
-    -webkit-filter: hue-rotate(-360deg);
-            filter: hue-rotate(-360deg); } }
-
 @keyframes hue {
   from {
-    -webkit-filter: hue-rotate(0deg);
-            filter: hue-rotate(0deg); }
+    filter: hue-rotate(0deg); }
   to {
-    -webkit-filter: hue-rotate(-360deg);
-            filter: hue-rotate(-360deg); } }
-
-@-webkit-keyframes bg-color {
-  0% {
-    background-color: #EEC499; }
-  10% {
-    background-color: #D18E78; }
-  20% {
-    background-color: #9b423d; }
-  30% {
-    background-color: #A21E55; }
-  40% {
-    background-color: #98559c; }
-  50% {
-    background-color: #554d81; }
-  60% {
-    background-color: #5d96cd; }
-  70% {
-    background-color: #68b6be; }
-  80% {
-    background-color: #63ae9a; }
-  90% {
-    background-color: #4e8a7b; }
-  100% {
-    background-color: #EEC499; } }
+    filter: hue-rotate(-360deg); } }
 
 @keyframes bg-color {
   0% {
@@ -905,39 +865,9 @@ a {
   100% {
     background-color: #EEC499; } }
 
-@-webkit-keyframes loaderAnim {
-  to {
-    -webkit-transform: scale3d(0.5, 0.5, 1);
-            transform: scale3d(0.5, 0.5, 1); } }
-
 @keyframes loaderAnim {
   to {
-    -webkit-transform: scale3d(0.5, 0.5, 1);
-            transform: scale3d(0.5, 0.5, 1); } }
-
-@-webkit-keyframes color {
-  0% {
-    fill: #EEC499; }
-  10% {
-    fill: #D18E78; }
-  20% {
-    fill: #9b423d; }
-  30% {
-    fill: #A21E55; }
-  40% {
-    fill: #98559c; }
-  50% {
-    fill: #554d81; }
-  60% {
-    fill: #5d96cd; }
-  70% {
-    fill: #68b6be; }
-  80% {
-    fill: #63ae9a; }
-  90% {
-    fill: #4e8a7b; }
-  100% {
-    fill: #EEC499; } }
+    transform: scale3d(0.5, 0.5, 1); } }
 
 @keyframes color {
   0% {
@@ -1006,8 +936,7 @@ p {
   pointer-events: none;
   border-radius: 50%;
   background: #3b3b3b;
-  -webkit-animation: loaderAnim 0.8s ease-out infinite alternate forwards;
-          animation: loaderAnim 0.8s ease-out infinite alternate forwards; }
+  animation: loaderAnim 0.8s ease-out infinite alternate forwards; }
 
 #webgl {
   position: fixed;
@@ -1042,14 +971,7 @@ h2 {
   margin: 0; }
 
 .header {
-  max-width: 81.25em;
-  margin-left: auto;
-  margin-right: auto;
   height: 400vh; }
-  .header::after {
-    clear: both;
-    content: "";
-    display: table; }
   .header .logo {
     float: left;
     display: block;
@@ -1065,21 +987,15 @@ h2 {
       position: absolute;
       left: 50%;
       top: 50%;
-      -webkit-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%); }
+      transform: translate(-50%, -50%); }
       .header .logo svg .st0 {
-        -webkit-animation-name: color;
-                animation-name: color;
-        -webkit-animation-timing-function: linear;
-                animation-timing-function: linear;
-        -webkit-animation-duration: 20s;
-                animation-duration: 20s;
-        -webkit-animation-iteration-count: infinite;
-                animation-iteration-count: infinite; }
+        animation-name: color;
+        animation-timing-function: linear;
+        animation-duration: 20s;
+        animation-iteration-count: infinite; }
     .header .logo img {
       height: 100%;
-      -webkit-filter: brightness(1);
-              filter: brightness(1); }
+      filter: brightness(1); }
 
 .events {
   max-width: 81.25em;
@@ -1099,19 +1015,14 @@ section.programm {
   margin-left: auto;
   margin-right: auto;
   background-size: 100px;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   background-size: 150px;
-  background: -webkit-linear-gradient(top left, #ff4136, #85144b);
   background: linear-gradient(to bottom right, #ff4136, #85144b);
   padding-top: 30px;
   padding-bottom: 50px;
-  -webkit-animation-name: bg-color;
-          animation-name: bg-color;
-  -webkit-animation-duration: 80s;
-          animation-duration: 80s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-name: bg-color;
+  animation-duration: 80s;
+  animation-iteration-count: infinite;
   box-shadow: 0px 5px 30px 15px rgba(0, 0, 0, 0.6);
   min-height: 100vh; }
   section.programm::after {
@@ -1155,7 +1066,6 @@ section.about {
   margin-left: auto;
   margin-right: auto;
   min-height: 100vh;
-  background: -webkit-linear-gradient(top left, #16161d, #4d3c56);
   background: linear-gradient(to bottom right, #16161d, #4d3c56);
   box-shadow: 0px 50px 30px 0px rgba(0, 0, 0, 0.6);
   padding: 100px 0; }
@@ -1210,8 +1120,7 @@ section.about {
     section.about .dj-name:last-child {
       margin-right: 0; }
     section.about .dj-name:hover {
-      -webkit-transform: rotate(180deg);
-              transform: rotate(180deg);
+      transform: rotate(180deg);
       display: block; }
     section.about .dj-name a {
       padding: 2px; }
@@ -1238,15 +1147,11 @@ section.newsletter {
     section.newsletter .news:last-child {
       margin-right: 0; }
     section.newsletter .news input[type="text"] {
-      -webkit-transition: border 0.3s;
       transition: border 0.3s;
-      -webkit-appearance: none;
-         -moz-appearance: none;
-              appearance: none;
+      appearance: none;
       box-shadow: none;
       background: rgba(255, 255, 255, 0.3);
-      -webkit-backdrop-filter: blur(30px);
-              backdrop-filter: blur(30px);
+      backdrop-filter: blur(30px);
       color: white;
       font-size: 3em;
       font-family: futura;
