@@ -2933,6 +2933,10 @@ a {
 .no-mb {
   margin-bottom: 0; }
 
+.center {
+  display: block;
+  margin: auto; }
+
 .frame {
   -webkit-transform: rotate(-3deg);
   -ms-transform: rotate(-3deg);
@@ -3857,6 +3861,13 @@ p {
   background: #3b3b3b;
   -webkit-animation: loaderAnim 0.8s ease-out infinite alternate forwards;
   animation: loaderAnim 0.8s ease-out infinite alternate forwards; }
+
+.noselect, h1 {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
 
 #webgl {
   position: fixed;

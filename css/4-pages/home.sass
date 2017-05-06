@@ -18,6 +18,8 @@ p
   font-family: "Russo One"
   font-size: 1.5em
 
+
+
 /* Page Loader
 
 .js .loading
@@ -44,7 +46,13 @@ p
     background: #3b3b3b
     animation: loaderAnim 0.8s ease-out infinite alternate forwards
 
-
+.noselect
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  //-khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
 
 #webgl
   position: fixed
@@ -68,6 +76,7 @@ h1
   font-size: 10em
   margin: 0
   margin-bottom: 100px
+  @extend .noselect
 
 h2
   font-size: 3em
