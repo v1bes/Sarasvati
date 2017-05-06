@@ -3168,7 +3168,8 @@ a {
   margin-right: 2.35765%;
   width: 100%;
   overflow-x: scroll;
-  white-space: nowrap; }
+  white-space: nowrap;
+  margin-bottom: 1em; }
   .gallery:last-child {
     margin-right: 0; }
   .gallery div {
