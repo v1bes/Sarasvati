@@ -1,0 +1,2 @@
+2017-05-12 15:53:59	guest	http://localhost:5757/	SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'ProcessLogger' for key 'class' (in /wire/core/Modules.php line 1672)
+2017-05-12 15:54:03	guest	http://localhost:5757/admin/login/	SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'InputfieldIcon' for key 'class' (in /wire/core/Modules.php line 1672)

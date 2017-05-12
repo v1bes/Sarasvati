@@ -1,0 +1,1 @@
+2017-05-12 15:55:40	henry	http://localhost:5757/admin/login/	Successful login for 'henry'
