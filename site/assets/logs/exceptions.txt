@@ -12,3 +12,6 @@
 2017-05-13 16:55:26	?	?	SQLSTATE[HY000] [2002] No such file or directory (in /wire/core/ProcessWire.php line 377)
 2017-05-13 16:58:15	?	?	Unable to load WireDatabasePDO - SQLSTATE[HY000] [2002] No such file or directory (in /wire/core/WireDatabasePDO.php line 217)
 2017-05-13 16:58:15	?	?	SQLSTATE[HY000] [2002] No such file or directory (in /wire/core/ProcessWire.php line 377)
+2017-05-13 17:13:52	henry	http://sarasvati:8888/admin/page/edit/?id=1&InputfieldFileAjax=1	Image of 525x366 does not meet minimum size requirements (400x400) (in /wire/modules/Inputfield/InputfieldFile/InputfieldFile.module line 622)
+2017-05-13 17:13:55	henry	http://sarasvati:8888/admin/page/edit/?id=1&InputfieldFileAjax=1	Image of 524x366 does not meet minimum size requirements (400x400) (in /wire/modules/Inputfield/InputfieldFile/InputfieldFile.module line 622)
+2017-05-13 17:14:00	henry	http://sarasvati:8888/admin/page/edit/?id=1&InputfieldFileAjax=1	Image of 480x360 does not meet minimum size requirements (400x400) (in /wire/modules/Inputfield/InputfieldFile/InputfieldFile.module line 622)
