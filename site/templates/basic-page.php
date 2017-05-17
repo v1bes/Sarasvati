@@ -10,7 +10,7 @@
 	</head>
 	<body>
 
-		<h1><?php echo $page->title; ?></h1>
+		<!-- <h1>< ?php echo $page->title; ?></h1> -->
 
 		<!-- Vielleicht später für Front-end editing
 		< ?php if($page->editable()) echo "<p><a href='$page->editURL'>Edit</a></p>"; ?>
