@@ -7,21 +7,20 @@ section.about
 
   img
     +span-columns(12)
-    margin-bottom: 40px
 
   .dj-desc
     +span-columns(6)
     font-size: 1em
-    line-height: 1.5em
+    text-align: justify
 
-  .dj-desc-shift
-    +span-columns(6)
+  .shift
     +shift(3)
-    font-size: 1em
-    line-height: 1.5em
+
+    h4
+      text-align: right
 
   .dj-img
-    +span-columns(3)
+    +span-columns(2)
 
     img
       border-radius: 50%
@@ -31,6 +30,7 @@ section.about
   .dj-name
     +span-columns(3)
     text-align: center
+    font-weight: 600
     &:hover
       transform: rotate(180deg)
       display: block
