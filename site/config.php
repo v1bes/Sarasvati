@@ -89,4 +89,4 @@ $config->installed = 1494597074;
  * Installer: HTTP Hosts Whitelist
  *
  */
-$config->httpHosts = array('localhost:5757', 'sarasvati', 'sarasvati:8888');
+$config->httpHosts = array('localhost:5757', 'sarasvati', 'sarasvati:8888', '127.0.0.1');
