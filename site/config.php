@@ -38,7 +38,7 @@ if(!defined("PROCESSWIRE")) die();
  * @var bool
  *
  */
-$config->debug = false;
+$config->debug = true;
 
 
 /*** INSTALLER CONFIG ********************************************************************/
@@ -51,7 +51,7 @@ $config->debug = false;
 $config->dbHost = 'localhost';
 $config->dbName = 'vati_base';
 $config->dbUser = 'root';
-$config->dbPass = 'Grizzlytank33';
+$config->dbPass = 'root';
 $config->dbPort = '3306';
 
 /**
@@ -89,4 +89,4 @@ $config->installed = 1494597074;
  * Installer: HTTP Hosts Whitelist
  *
  */
-$config->httpHosts = array('localhost:5757', 'sarasvati', 'sarasvati:8888');
+$config->httpHosts = array('localhost:5757', 'sarasvati', 'sarasvati:8888', 'localhost:8888');

@@ -1,3 +1,7 @@
 2017-05-12 15:55:40	henry	http://localhost:5757/admin/login/	Successful login for 'henry'
 2017-05-13 17:05:02	henry	http://sarasvati:8888/admin/login/	Successful login for 'henry'
 2017-05-13 17:10:01	henry	http://sarasvati:8888/admin/login/	Successful login for 'henry'
+2017-05-17 13:56:32	guest	http://localhost:5757/admin/login/?id=1071	Error: Failed login for 'v1ber' - Invalid password
+2017-05-17 13:56:45	guest	http://localhost:5757/admin/login/?id=1071	Error: Failed login for 'admin' - Unknown user: admin
+2017-05-17 13:57:10	v1ber	http://localhost:5757/admin/login/?id=1071	Successful login for 'v1ber'
+2017-05-18 09:26:17	v1ber	http://localhost:8888/admin/login/	Successful login for 'v1ber'

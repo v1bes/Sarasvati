@@ -29,3 +29,6 @@
 2017-05-13 17:11:19	henry	http://sarasvati:8888/admin/module/	Installed module 'PageFrontEdit'
 2017-05-13 17:11:19	henry	http://sarasvati:8888/admin/module/	Saved module info caches
 2017-05-13 17:11:29	henry	http://sarasvati:8888/admin/module/edit?name=PageFrontEdit	Saved module 'PageFrontEdit' config data
+2017-05-17 13:57:10	v1ber	http://localhost:5757/admin/page/edit/?login=1&id=1071	Failed to init module: ProcessPageEdit - Unknown page
+2017-05-17 13:57:59	v1ber	http://localhost:8888/admin/page/edit/?login=1&id=1071	Failed to init module: ProcessPageEdit - Unknown page
+2017-05-17 13:58:08	v1ber	http://localhost:8888/admin/page/edit/?login=1&id=1071	Failed to init module: ProcessPageEdit - Unknown page
