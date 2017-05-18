@@ -38,6 +38,8 @@ if(!defined("PROCESSWIRE")) die();
  * @var bool
  *
  */
+
+/* TODO: deactivate that again !! */
 $config->debug = false;
 
 
@@ -90,3 +92,7 @@ $config->installed = 1494597074;
  *
  */
 $config->httpHosts = array('localhost:5757', 'sarasvati', 'sarasvati:8888', '127.0.0.1');
+
+/* experimental for locale fixing */
+/* setlocale(LC_ALL,'en_US.UTF-8');
+geht nicht...  */
