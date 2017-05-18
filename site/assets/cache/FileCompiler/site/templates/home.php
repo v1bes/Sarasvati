@@ -20,10 +20,13 @@
           <div class="frame"><img src="<?php echo $config->urls->templates?>img/design/frame2.png"><img src="<?php echo $config->urls->templates?>img/design/frame-off2.png" class="off"><img src="<?php echo $config->urls->templates?>img/content/test.png" alt="" class="main"><img src="<?php echo $config->urls->templates?>img/content/test.png" alt="" class="main2"></div>
         </div>
         <div class="info">
-          <h2>Silvester</h2>
-          <h3>01.01.2016 - 3 Uhr</h3>
-          <hr>
-          <?php echo "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>";?>
+          <?php $events = $pages->find("template=programm, sort=-created, limit=1");
+          foreach($events as $event) {
+            echo "<h2>".$event->title."</h2>";
+            echo "<h3>".strftime("%d. %B – %H:%M", $event->date)."</h3>";
+            echo "<hr>";
+            echo "<p>".$event->body_text."</p>";
+          } ?>
         </div>
       </div>
     </section>
@@ -31,18 +34,29 @@
 
 <!-- About -->
     <section class="about">
-      <h1>AbouT</h1>
-
-      <!-- Team -->
-      <div class="outer-container">
-        <img src="http://placehold.it/1300x600" alt="">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <?php $abouts = $pages->find("template=about, sort=-created, limit=1");
+        foreach($abouts as $about) {
+          echo "<h1>".$about->title."</h1>";
+          // team
+          echo "<div class='outer-container'>";
+          if (isset($about->single_image)) {
+            echo "<img src='".$about->single_image->url."' alt='Gruppenfoto'>";
+          } else {
+            echo "<img src='http://placehold.it/1300x600' alt=''>";
+          }
+          echo "<p>".$about->body_text."</p>";
+        } ?>
       </div>
 
       <!-- DJs -->
+
       <div class="outer-container">
-        <div class="dj-img"><img src="http://placecage.com/300/300" alt=""></div>
-        <div class="dj-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+      <?php $djs = $pages->find("template=djs, sort=-created, limit=5");
+      foreach($djs as $dj) {
+        echo "<h2>".$dj->title."</h2>";
+        echo "<div class='dj-img'><img src='".$dj->single_image->url."' alt=''></div>";
+        echo "<div class='dj-desc'>".$dj->body_text."</div>";
+      } ?>
       </div>
       <div class="outer-container">
         <div class="dj-desc-shift">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>

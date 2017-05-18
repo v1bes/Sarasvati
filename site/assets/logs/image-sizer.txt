@@ -31,3 +31,4 @@
 2017-05-17 14:52:54	v1ber	http://localhost:8888/admin/page/edit/?id=1&InputfieldFileAjax=1	GD Resized: img_2195_2.jpg => img_2195_2.0x260.jpg (0x260) 1.1256 secs 881369 => 32123 bytes (quality=90, sharpening=soft)
 2017-05-17 14:53:01	v1ber	http://localhost:8888/admin/page/edit/?id=1&InputfieldFileAjax=1	GD Resized: img_2257.jpg => img_2257.2048x2048.jpg (2048x2048) 6.9796 secs 10977350 => 865348 bytes (quality=90, sharpening=soft)
 2017-05-17 14:53:02	v1ber	http://localhost:8888/admin/page/edit/?id=1&InputfieldFileAjax=1	GD Resized: img_2257.jpg => img_2257.0x260.jpg (0x260) 0.9853 secs 865348 => 38589 bytes (quality=90, sharpening=soft)
+2017-05-18 15:00:16	v1ber	http://localhost:8888/admin/page/edit/?id=1022&InputfieldFileAjax=1	GD Resized: 86217250_berlusconi.jpg => 86217250_berlusconi.0x260.jpg (0x260) 0.3022 secs 67527 => 33971 bytes (quality=90, sharpening=soft)

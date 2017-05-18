@@ -31,3 +31,7 @@
 2017-05-17 14:52:38	v1ber	http://localhost:8888/admin/page/edit/?id=1&InputfieldFileAjax=1	img_1984.0x260.jpg - not a recognized image (in /wire/core/ImageSizerEngine.php line 429)
 2017-05-17 14:52:45	v1ber	http://localhost:8888/admin/page/edit/?id=1&InputfieldFileAjax=1	img_2067.2048x2048.jpg - not enough memory to resize to the final image (in /wire/core/ImageSizerEngineGD.php line 220)
 2017-05-17 14:52:45	v1ber	http://localhost:8888/admin/page/edit/?id=1&InputfieldFileAjax=1	img_2067.0x260.jpg - not a recognized image (in /wire/core/ImageSizerEngine.php line 429)
+2017-05-18 14:14:54	?	?	Unable to load WireDatabasePDO - SQLSTATE[HY000] [2002] No such file or directory (in /wire/core/WireDatabasePDO.php line 217)
+2017-05-18 14:14:54	?	?	SQLSTATE[HY000] [2002] No such file or directory (in /wire/core/ProcessWire.php line 377)
+2017-05-18 14:14:54	?	?	Unable to load WireDatabasePDO - SQLSTATE[HY000] [2002] No such file or directory (in /wire/core/WireDatabasePDO.php line 217)
+2017-05-18 14:14:54	?	?	SQLSTATE[HY000] [2002] No such file or directory (in /wire/core/ProcessWire.php line 377)
