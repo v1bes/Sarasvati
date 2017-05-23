@@ -93,14 +93,15 @@ include("./basic-page.php");?>
       </div>
     </section>
 
-<?php include("./php/gallery.php");?>
+<?php include("./php/gallery.php"); ?>
 
     <!-- Newsletter -->
     <section class="newsletter">
-      <h1 class="no-mb">NewsletteR</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <?php $newsletter = $pages->get("/newsletter"); ?>
+      <h1 class="no-mb"><?php echo $newsletter->title; ?></h1>
+      <p><?php echo $newsletter->body_text; ?></p>
       <form class="news" action="" method="get">
-        <input type="text" placeholder="pen@ration.com">
+        <input type="text" placeholder="gibt👏mir👏deine👏email👏hart">
         <!-- <input type="submit" value="Click mich "> -->
       </form>
     </section>

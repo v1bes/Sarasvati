@@ -1,3 +1,6 @@
 2017-05-13 17:10:47	henry	http://sarasvati:8888/admin/profile/	Profile saved - admin_theme
 2017-05-17 14:09:06	v1ber	http://localhost:8888/admin/page/edit/?id=1	Removed 'gallery' temp file(s) for page / - img_1911.jpg, img_1744.jpg, img_2119_copy.jpg, img_2132.jpg, img_2109.jpg, img_1800.jpg, img_2195_2.jpg, img_2257.jpg, img_2286.jpg, img_2296.jpg (Pageimages)
 2017-05-17 14:35:13	v1ber	http://localhost:8888/admin/setup/template/removeFields	Deleted field "event_titel" data in 0 row(s) from 0 page(s). [page-by-page] (Fields)
+2017-05-19 11:10:23	v1ber	http://localhost:8888/admin/page/sort/	Updated sort for 2 pages (ProcessPageSort)
+2017-05-19 11:10:48	v1ber	http://localhost:8888/admin/page/sort/	Updated sort for 6 pages (ProcessPageSort)
+2017-05-19 11:10:56	v1ber	http://localhost:8888/admin/page/sort/	Updated sort for 1 pages (ProcessPageSort)
