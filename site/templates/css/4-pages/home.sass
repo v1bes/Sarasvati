@@ -16,8 +16,10 @@ a
     color: #fff
 
 p
-  font-family: "Russo One"
-  font-size: 1.5em
+  font-family: "Jura"
+  line-height: 1.2em
+  font-weight: 400
+  font-size: 1.2em
 
 
 
@@ -71,17 +73,23 @@ main
 
 h1, h2
   font-family: AtlanticCruise
+  margin: 0
 
 h1
   text-align: center
   font-size: 10em
-  margin: 0
   margin-bottom: 100px
   @extend .noselect
+  +tablet
+    font-size: 8em
+  +phone
+    font-size: 5em
+    margin-bottom: 50px
 
 h2
   font-size: 3em
-  margin: 0
+  +phone
+    text-align: center
 
 .header
   +outer-container
@@ -118,3 +126,6 @@ h2
 
   .con
     max-width: 1200px
+
+iframe.soundcloud-icon
+  transform: translateY(25%)

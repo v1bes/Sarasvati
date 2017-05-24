@@ -23,9 +23,10 @@ include("./basic-page.php");?>
           <?php $events = $pages->find("template=programm, sort=-created, limit=1");
           foreach($events as $event) {
             echo "<h2>".$event->title."</h2>";
-            echo "<h3>".strftime("%d. %B – %H:%M", $event->date)."</h3>";
+            echo "<div class='time'><p>Wann?</p><p class='bold'>".strftime("%d. %B – %H:%M", $event->date)."</p></div>";
+            echo "<div class='location'><p>Wo?</p><p class='bold'>Sisyphos</p></div>";
             echo "<hr>";
-            echo "<p>".$event->body_text."</p>";
+            echo "<p>".$event->body_text.". Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen. Manchmal benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen. </p>";
           } ?>
         </div>
       </div>
@@ -50,7 +51,7 @@ include("./basic-page.php");?>
 
       <!-- DJs -->
 
-      <div class="outer-container">
+      <div class="outer-container mb-30">
       <?php $djs = $pages->find("template=djs, sort=-created, limit=5");
       foreach($djs as $dj) {
         echo "<h2>".$dj->title."</h2>";
@@ -58,16 +59,19 @@ include("./basic-page.php");?>
         echo "<div class='dj-desc'>".$dj->body_text."</div>";
       } ?>
       </div>
-      <div class="outer-container">
-        <div class="dj-desc-shift">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+      <div class="outer-container mb-30">
+        <h2>Header Name<iframe class="soundcloud-icon" allowtransparency="true" scrolling="no" frameborder="no" src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2Fmarcolilli&color=white_transparent&size=64" style="width: 64px; height: 64px;"></iframe></h2>
+        <div class="dj-desc-shift"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p></div>
         <div class="dj-img"><img src="http://placecage.com/300/300" alt=""></div>
       </div>
-      <div class="outer-container">
+      <div class="outer-container outer-container mb-30">
+        <h2>Header Name</h2>
         <div class="dj-img"><img src="http://placecage.com/300/300" alt=""></div>
-        <div class="dj-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+        <div class="dj-desc"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p></div>
       </div>
-      <div class="outer-container">
-        <div class="dj-desc-shift">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+      <div class="outer-container outer-container mb-30">
+        <h2>Header Name</h2>
+        <div class="dj-desc-shift"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p></div>
         <div class="dj-img"><img src="http://placecage.com/300/300" alt=""></div>
       </div>
 

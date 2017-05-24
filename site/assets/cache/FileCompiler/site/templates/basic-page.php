@@ -13,7 +13,7 @@
 
 		<!-- fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet">
-
+		<link href="https://fonts.googleapis.com/css?family=Jura:300,400,500,600" rel="stylesheet">
 		<!-- includes -->
 		<?php include(\ProcessWire\wire('files')->compile('php/functions.inc',array('includes'=>true,'namespace'=>true,'modules'=>true,'skipIfNamespace'=>true))); ?>
 	</head>
