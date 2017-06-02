@@ -52,11 +52,11 @@ include("./basic-page.php");?>
       <!-- DJs -->
 
       <div class="outer-container mb-30">
-      <?php $djs = $pages->find("template=djs, sort=-created, limit=5");
-      foreach($djs as $dj) {
-        echo "<h2>".$dj->title."</h2>";
-        echo "<div class='dj-img'><img src='".$dj->single_image->url."' alt=''></div>";
-        echo "<div class='dj-desc'>".$dj->body_text."</div>";
+      <?php $top_djs = $pages->get("title=top djs, sort=-created, limit=5")->children;
+      foreach($top_djs as $top_dj) {
+        echo "<h2>".$top_dj->title."</h2>";
+        echo "<div class='dj-img'><img src='".$top_dj->single_image->url."' alt=''></div>";
+        echo "<div class='dj-desc'>".$top_dj->body_text."</div>";
       } ?>
       </div>
       <div class="outer-container mb-30">
@@ -76,9 +76,19 @@ include("./basic-page.php");?>
       </div>
 
       <!-- Name list -->
-      <h1>Andere DJs</h1>
-      <div class="outer-container">
-        <p class="dj-name"><a href="">Peter Pan</a></p>
+      <h1>Andere DJs</h1><?php
+      $djs = $pages->get("title=djs, sort=-created, limit=12")->children;
+      $i = 0;
+      foreach($djs as $dj) {
+        if ($i %4 == 0) {
+          echo "<div class='outer-container'>";
+        }
+        echo "<p class='dj-name'><a href='".$dj->soundcloudurl."' target='_blank'>".$dj->title."</a></p>";
+        $i = $i + 1;
+        if ($i %4 == 0) {
+          echo "</div>";
+        }
+      }?>
         <p class="dj-name"><a href="">Pipi Langstrump</a></p>
         <p class="dj-name"><a href="">Helge Schneider</a></p>
         <p class="dj-name"><a href="">Udo Jürgens</a></p>
@@ -105,7 +115,7 @@ include("./basic-page.php");?>
       <h1 class="no-mb"><?php echo $newsletter->title; ?></h1>
       <p><?php echo $newsletter->body_text; ?></p>
       <form class="news" action="" method="get">
-        <input type="text" placeholder="gibt👏mir👏deine👏email👏hart">
+        <input type="text" placeholder="pen@ration.com">
         <!-- <input type="submit" value="Click mich "> -->
       </form>
     </section>
@@ -119,10 +129,10 @@ include("./basic-page.php");?>
       <i class="fa fa-instagram" aria-hidden="true"></i>
     </div>
   </footer>
-<!--
+
   <script src="<?php echo $config->urls->templates?>js/regl.min.js"></script>
   <script src="<?php echo $config->urls->templates?>js/min/function-min.js"></script>
-  <script id="fragmentShader" type="x-shader/x-fragment">
+  <!-- <script id="fragmentShader" type="x-shader/x-fragment">
     #define TWO_PI 6.2831853072
     #define PI 3.14159265359
     precision highp float;
@@ -193,8 +203,8 @@ include("./basic-page.php");?>
     1.0
     );
     }
-  </script>
+  </script> -->
   <script src="<?php echo $config->urls->templates?>js/demo1.js"></script>
--->
+
 </body>
 </html>

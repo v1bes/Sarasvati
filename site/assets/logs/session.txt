@@ -24,3 +24,19 @@
 2017-05-24 18:22:06	?	?	User 'v1ber' - Error: Session fingerprint changed (IP address or useragent) (IP: 0.0.0.0)
 2017-05-24 18:23:11	v1ber	http://localhost:8888/admin/login/?id=1019	Successful login for 'v1ber'
 2017-05-24 18:23:16	?	?	User 'v1ber' - Error: Session fingerprint changed (IP address or useragent) (IP: 0.0.0.0)
+2017-06-02 16:39:30	guest	http://localhost:8888/admin/login/	Error: Failed login for 'admin' - Unknown user: admin
+2017-06-02 16:39:38	guest	http://localhost:8888/admin/login/	Error: Failed login for 'admin' - Unknown user: admin
+2017-06-02 16:40:04	guest	http://localhost:8888/admin/login/	Error: Failed login for 'v1ber' - Invalid password
+2017-06-02 16:40:18	guest	http://localhost:8888/admin/login/	Error: Failed login for 'admin' - Unknown user: admin
+2017-06-02 16:40:22	guest	http://localhost:8888/admin/login/	Error: Failed login for 'admin' - User is not allowed to login
+2017-06-02 16:42:27	guest	http://localhost:8888/admin/login/	Error: Failed login for 'admin' - Unknown user: admin
+2017-06-02 16:42:33	guest	http://localhost:8888/admin/login/	Error: Failed login for 'admin' - Unknown user: admin
+2017-06-02 16:42:37	guest	http://localhost:8888/admin/login/	Error: Failed login for 'admin' - User is not allowed to login
+2017-06-02 16:45:14	guest	http://localhost:8888/admin/login/	Error: Failed login for 'v1ber' - Invalid password
+2017-06-02 16:45:18	guest	http://localhost:8888/admin/login/	Error: Failed login for 'v1ber' - Invalid password
+2017-06-02 16:45:21	guest	http://localhost:8888/admin/login/	Error: Failed login for 'v1ber' - User is not allowed to login
+2017-06-02 16:45:34	guest	http://localhost:8888/admin/login/	Error: Failed login for 'v1ber' - Invalid password
+2017-06-02 16:45:46	guest	http://localhost:8888/admin/login/	Error: Failed login for 'v1ber' - User is not allowed to login
+2017-06-02 16:47:07	guest	http://localhost:8888/admin/login/	Error: Failed login for 'v1ber' - Invalid password
+2017-06-02 16:48:12	v1ber	http://localhost:8888/admin/login/	Successful login for 'v1ber'
+2017-06-02 17:17:37	?	?	User 'v1ber' - Error: Session fingerprint changed (IP address or useragent) (IP: 0.0.0.0)

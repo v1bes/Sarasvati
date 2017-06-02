@@ -2923,7 +2923,16 @@ a {
     clear: both;
     content: "";
     display: table; }
-  @media (max-width: 419px) {
+  @media (min-width: 768px) and (max-width: 1079px) {
+    .outer-container {
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto; }
+      .outer-container::after {
+        clear: both;
+        content: "";
+        display: table; } }
+  @media (max-width: 767px) {
     .outer-container {
       max-width: 90%;
       margin-left: auto;
@@ -3112,15 +3121,20 @@ a {
   width: 100%;
   overflow-x: scroll;
   white-space: nowrap;
+  background-color: #261026;
+  padding: 20px 0;
   margin-bottom: 1em; }
   .gallery:last-child {
     margin-right: 0; }
   .gallery a {
     width: auto; }
     .gallery a img {
-      height: 30vh;
+      height: 400px;
       width: auto;
       display: inline-block; }
+      @media (max-width: 767px) {
+        .gallery a img {
+          height: 200px; } }
 
 /*! PhotoSwipe main CSS by Dmitry Semenov | photoswipe.com | MIT license */
 /*
@@ -3823,17 +3837,17 @@ h1 {
   text-align: center;
   font-size: 10em;
   margin-bottom: 100px; }
-  @media (min-width: 768px) and (max-width: 1023px) {
+  @media (min-width: 768px) and (max-width: 1079px) {
     h1 {
       font-size: 8em; } }
-  @media (max-width: 419px) {
+  @media (max-width: 767px) {
     h1 {
       font-size: 5em;
       margin-bottom: 50px; } }
 
 h2 {
   font-size: 3em; }
-  @media (max-width: 419px) {
+  @media (max-width: 767px) {
     h2 {
       text-align: center; } }
 
@@ -3914,7 +3928,7 @@ section.programm {
       clear: both;
       content: "";
       display: table; }
-    @media (max-width: 419px) {
+    @media (max-width: 767px) {
       section.programm .prog-containter {
         max-width: 90%;
         margin-left: auto;
@@ -3931,7 +3945,15 @@ section.programm {
       display: block; }
       section.programm .prog-containter .frame-wrap:last-child {
         margin-right: 0; }
-      @media (max-width: 419px) {
+      @media (min-width: 768px) and (max-width: 1079px) {
+        section.programm .prog-containter .frame-wrap {
+          float: left;
+          display: block;
+          margin-right: 2.3576515979%;
+          width: 48.821174201%; }
+          section.programm .prog-containter .frame-wrap:last-child {
+            margin-right: 0; } }
+      @media (max-width: 767px) {
         section.programm .prog-containter .frame-wrap {
           float: left;
           display: block;
@@ -3955,7 +3977,15 @@ section.programm {
       font-weight: 600; }
       section.programm .prog-containter .info:last-child {
         margin-right: 0; }
-      @media (max-width: 419px) {
+      @media (min-width: 768px) and (max-width: 1079px) {
+        section.programm .prog-containter .info {
+          float: left;
+          display: block;
+          margin-right: 2.3576515979%;
+          width: 48.821174201%; }
+          section.programm .prog-containter .info:last-child {
+            margin-right: 0; } }
+      @media (max-width: 767px) {
         section.programm .prog-containter .info {
           float: left;
           display: block;
@@ -4027,7 +4057,7 @@ section.about {
     line-height: 1.5em; }
     section.about .dj-desc-shift:last-child {
       margin-right: 0; }
-    @media (max-width: 419px) {
+    @media (max-width: 767px) {
       section.about .dj-desc-shift {
         margin-left: 0%; } }
   section.about .dj-img {
@@ -4049,7 +4079,7 @@ section.about {
     text-align: center; }
     section.about .dj-name:last-child {
       margin-right: 0; }
-    @media (max-width: 419px) {
+    @media (max-width: 767px) {
       section.about .dj-name {
         float: left;
         display: block;
@@ -4061,11 +4091,15 @@ section.about {
     section.about .dj-name:hover {
       transform: rotate(180deg);
       display: block; }
-    @media (max-width: 419px) {
+    @media (max-width: 767px) {
       section.about .dj-name:hover {
         transform: none; } }
     section.about .dj-name a {
       padding: 2px; }
+      @media (max-width: 767px) {
+        section.about .dj-name a {
+          background-color: white;
+          color: #16161d; } }
       section.about .dj-name a:hover {
         color: #16161d;
         background-color: white; }
@@ -4088,6 +4122,15 @@ section.newsletter {
     margin-left: 21.3245107496%; }
     section.newsletter p:last-child {
       margin-right: 0; }
+    @media (max-width: 767px) {
+      section.newsletter p {
+        float: left;
+        display: block;
+        margin-right: 2.3576515979%;
+        width: 82.9403914003%;
+        margin-left: 8.5298042998%; }
+        section.newsletter p:last-child {
+          margin-right: 0; } }
   section.newsletter .news {
     float: left;
     display: block;
@@ -4103,11 +4146,11 @@ section.newsletter {
       background: rgba(255, 255, 255, 0.3);
       backdrop-filter: blur(30px);
       color: white;
-      font-size: 3em;
+      font-size: 2em;
       font-family: futura;
-      padding: 10px 10px 0 10px;
+      padding: 10px;
       width: 80%;
-      max-width: 700px;
+      max-width: 500px;
       border: none;
       border-bottom: solid 2px #c9c9c9; }
       section.newsletter .news input[type="text"]:focus {
